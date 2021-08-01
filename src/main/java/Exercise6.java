@@ -14,6 +14,12 @@ public class Exercise6 {
         int age = Integer.parseInt(cur_age);
         int retire = Integer.parseInt(ret_age);
 
+        // challenge negative number, state user can already retire
+        if (retire - age < 0) {
+            System.out.println("You can retire right now!");
+            System.exit(0);
+        }
+
         System.out.printf("You have %d years until you can retire.", retire - age);
 
         Date date = new Date();
